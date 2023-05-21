@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  padding: 0 8px;
+  margin: 0 auto;
+}
+
+:root {
+  /* homePage 1 Primary */
+  --primary: #ff4847;
+  --primary2: #2fc6a2;
+  --primary3: #8e59ff;
+}
+
+/* home Page 1 */
+.text-primary {
+  color: var(--primary);
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+
+/* home Page 2 */
+
+.text-primary2 {
+  color: var(--primary2);
+}
+.bg-primary2 {
+  background-color: var(--primary2);
+}
+
+/* home Page 3 */
+
+.text-primary3 {
+  color: var(--primary3);
+}
+.bg-primary2 {
+  background-color: var(--primary3);
+}
+
+/* Navbar Css start*/
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover ul {
+  display: block;
+}
+.dropdown ul {
+  position: absolute;
+  top: 25px;
+  left: -12px;
+  background-color: white;
+  display: none;
+
+  width: 120px;
+  text-align: center;
+}
+.dropdown ul li {
+  padding: 10px 0px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .menuUL {
+    /* display: none; */
+    position: fixed;
+    top: 88px;
+    left: 0;
+    height: 120vh;
+    /* background-color: #ff605818; */
+    width: 100vw;
+    min-width: 300px;
+    max-width: 100%;
+    font-size: 20px;
+    padding-left: 20px;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+  }
+  .menuUL li {
+    padding: 10px 0;
+  }
+  .dropdown ul {
+    left: 80px;
+    width: 150px;
+  }
+}
+
+/* Navbar Css End*/
+
+/* home page 1 Css */
+
+.feturesCard {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.06);
+  height: 288px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.feturesCard:hover {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.15);
+}
+
+.collaborateDataSave {
+  box-shadow: 12.873px 25.746px 41.1936px rgba(29, 30, 37, 0.15);
+}
+
+.transformMatrix {
+  transform: matrix(0.97, -0.26, 0.26, 0.97, 0, 0);
+}
+
+.collaborateCardRes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transform: rotate(-15deg);
+}
+
+.integrationCard {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.06);
+}
+
+/*  */
+
+/* / media queries  */
+@media only screen and (max-width: 550px) {
+  .collaborateCardRes {
+    flex-direction: column;
+    transform: rotate(0deg);
+  }
+}

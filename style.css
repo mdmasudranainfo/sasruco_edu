@@ -247,12 +247,67 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* switch 2 start  */
+
+/* shitch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider2:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider2 {
+  background-color: var(--primary);
+}
+
+input:focus + .slider2 {
+  box-shadow: 0 0 1px var(--primary);
+}
+
+input:checked + .slider2:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* switch 2 end  */
+
 /* / Rounded sliders / */
-.slider.round {
+.slider2.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider2.round:before {
   border-radius: 50%;
 }
 
@@ -273,4 +328,47 @@ input:checked + .slider:before {
 .PlanCard:hover button {
   color: var(--primary2);
   background-color: white;
+}
+
+.PlanCard2 {
+  transition: all 0.3s;
+}
+.PlanCard2 h1 {
+  font-size: 40px !important;
+}
+.PlanCard2:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translate(0, -40px);
+}
+.PlanCard2:hover h1 {
+  color: white;
+}
+
+.PlanCard2:hover button {
+  color: var(--primary);
+  background-color: white;
+}
+
+/* home Page 3 */
+.bgg {
+  background: radial-gradient(
+    81.16% 143.98% at 50% -5.92%,
+    rgba(142, 89, 255, 0.7) 0%,
+    rgba(29, 30, 37, 0) 61.96%
+  );
+  border-radius: 32px;
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+  /* border-bottom: 2px solid red; */
+}
+
+/* services Page */
+
+.features_Shadow {
+  transition: 0.3s;
+  box-shadow: 0px 0px 29px -25px;
+}
+
+.features_Shadow:hover {
+  box-shadow: 0px 0px 29px -18px;
 }

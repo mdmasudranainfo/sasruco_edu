@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif !important;
 }
 
 .container {
@@ -62,7 +62,7 @@ body {
 }
 .dropdown ul li {
   padding: 10px 0px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 @media only screen and (max-width: 1023px) {
@@ -85,14 +85,19 @@ body {
     padding: 10px 0;
   }
   .dropdown ul {
-    left: 80px;
-    width: 150px;
+    position: static;
+    background-color: transparent;
+    /* left: 80px;
+    width: 150px; */
   }
 }
 
 /* Navbar Css End*/
 
 /* home page 1 Css */
+.updatesShadow {
+  box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.15);
+}
 
 .feturesCard {
   box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.06);
@@ -247,9 +252,18 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* shitch end*/
+
 /* switch 2 start  */
 
-/* shitch */
 .switch {
   position: relative;
   display: inline-block;

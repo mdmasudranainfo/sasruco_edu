@@ -17,3 +17,13 @@ h4 {
   letter-spacing: -1px;
   font-weight: 700 !important;
 }
+
+h5 {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+h6 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}

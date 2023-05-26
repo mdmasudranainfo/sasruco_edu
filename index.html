@@ -691,7 +691,7 @@
           <div class="absolute top-[20%] -left-8">
             <img src="https://i.ibb.co/2t63Nxy/Element-1.png" alt="" />
           </div>
-          <div class="absolute -right-10 bottom-[20%]">
+          <div class="sm:block hidden absolute -right-10 bottom-[20%]">
             <img src="https://i.ibb.co/gvysZdL/Element.png" alt="" />
           </div>
           <div class="w-[173px] lg:block hidden relative">
@@ -870,7 +870,9 @@
               <div
                 class="bg-white dashboardCardFigure pt-[32px] pb-[48px] px-[19.5px] rounded-[20px] md:w-[74%]"
               >
-                <div class="flex items-center justify-between bg-white mb-9">
+                <div
+                  class="flex flex-wrap items-center justify-between bg-white mb-9"
+                >
                   <p class="text-[16.25px] leading-6 font-bold">
                     Sales Figures
                   </p>
@@ -965,10 +967,14 @@
                       class="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
                     >
                       <div class="text-center">
-                        <p class="text-[#808D9E] text-[13px] leading-[18px]">
+                        <p
+                          class="text-[#808D9E] md:text-[13px] text-[10px] leading-[18px]"
+                        >
                           Total
                         </p>
-                        <p class="xl:text-[21.125px] lg:text-[18px] font-bold">
+                        <p
+                          class="xl:text-[21.125px] lg:text-[18px] text-[12px] font-bold"
+                        >
                           140.90K
                         </p>
                       </div>
@@ -1179,7 +1185,7 @@
           <div class="flex justify-between flex-wrap gap-3">
             <div class="w-[650px]">
               <h1
-                class="leading-[64px] text-[60px] font-bold tracking-[-0.03em] text-white"
+                class="leading-[64px] md:text-[60px] text-5xl font-bold tracking-[-0.03em] text-white"
               >
                 See what our <span class="text-primary">customers</span> had to
                 say
@@ -1726,7 +1732,7 @@
             </div>
             <div class="">
               <button
-                class="px-6 py-[14px] text-white font-bold leading-[20px] tracking-[-1px] bg-[#1D1E25] rounded-r-md"
+                class="sm:px-6 px-2 py-[14px] text-white font-bold leading-[20px] tracking-[-1px] bg-[#1D1E25] rounded-r-md"
               >
                 Get Started
               </button>

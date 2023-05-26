@@ -158,6 +158,11 @@ body {
 .analyticsCard2 {
   box-shadow: -15px 30px 48px rgba(29, 30, 37, 0.06);
 }
+@media screen and (max-width: 500px) {
+  .storySection {
+    margin-top: 1400px;
+  }
+}
 @media screen and (max-width: 512px) {
   .storySection {
     margin-top: 1400px;

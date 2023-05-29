@@ -1,3 +1,8 @@
+$(".counter").counterUp({
+  delay: 50,
+  time: 1000,
+});
+
 // Swippwr Js
 
 var swiper = new Swiper(".swiper-container", {

@@ -282,7 +282,9 @@
           <div
             class="flex flex-col justify-center items-center border-r border-[#D24040]"
           >
-            <h1 class="text-[60px] font-bold">4.8</h1>
+            <h1 class="text-[60px] font-bold">
+              <span class="counter">4.8</span>
+            </h1>
             <div class="">
               <i class="fa-solid fa-star text-[#FFD88D]"></i>
               <i class="fa-solid fa-star text-[#FFD88D]"></i>
@@ -296,7 +298,7 @@
           <div
             class="flex flex-col justify-center items-center border-r border-[#D24040]"
           >
-            <h1 class="text-[60px] font-bold">4.5</h1>
+            <h1 class="text-[60px] font-bold counter">4.5</h1>
             <div class="">
               <i class="fa-solid fa-star text-[#FFD88D]"></i>
               <i class="fa-solid fa-star text-[#FFD88D]"></i>
@@ -308,7 +310,7 @@
           </div>
 
           <div class="flex flex-col justify-center items-center">
-            <h1 class="text-[60px] font-bold">4.9</h1>
+            <h1 class="text-[60px] font-bold counter">4.9</h1>
             <div class="">
               <i class="fa-solid fa-star text-[#FFD88D]"></i>
               <i class="fa-solid fa-star text-[#FFD88D]"></i>
@@ -664,7 +666,7 @@
           </li>
         </ul>
         <button
-          class="font-bold tracking-[-0.05px] bg-primary text-white px-7 py-2 rounded-lg mt-12"
+          class="font-bold tracking-[-0.05px] bg-primary text-white px-7 py-2 rounded-lg mt-12 hover:bg-white hover:border-[#ff4847] border hover:text-[#ff4847] ease-in duration-200"
         >
           Get started now
         </button>
@@ -1621,7 +1623,7 @@
       <div
         class="grid mt-14 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]"
       >
-        <div>
+        <div class="hover:opacity-80 duration-200 ease-in">
           <div>
             <img class="w-full" src="https://i.ibb.co/NrKYHwq/Img.png" alt="" />
           </div>
@@ -1646,7 +1648,7 @@
             October 27, 2021 | 4 min read
           </p>
         </div>
-        <div>
+        <div class="hover:opacity-80 duration-200 ease-in">
           <div>
             <img
               class="w-full"
@@ -1670,7 +1672,7 @@
             October 27, 2021 | 4 min read
           </p>
         </div>
-        <div>
+        <div class="hover:opacity-80 duration-200 ease-in">
           <div>
             <img
               class="w-full"
@@ -1902,8 +1904,11 @@
 
     <!-- jQuery Cdn -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="main.js"></script>
+    <!-- counterUp -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.counterup.min.js"></script>
 
-    <script></script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -1349,7 +1349,12 @@
             <button
               class="rounded-lg flex justify-center gap-2 items-center text-[#1D1E25]"
             >
-              <img src="https://i.ibb.co/D50cz2s/watch-the-reel.png" alt="" />
+              <img
+                id="videoIcone2"
+                class="cursor-pointer"
+                src="https://i.ibb.co/D50cz2s/watch-the-reel.png"
+                alt=""
+              />
               <span class="font-bold">Watch our platform!</span>
             </button>
           </div>
@@ -1360,7 +1365,7 @@
       <!-- modal video  -->
       <div
         id="modalVideo"
-        class="fixed top-0 left-0 h-screen w-screen flex justify-center items-center z-[500] hidden bg-[#00000052]"
+        class="fixed top-0 left-0 h-screen w-screen max-w-full flex justify-center items-center z-[500] hidden bg-[#00000052]"
       >
         <div class="pt-10 relative">
           <div
@@ -1369,7 +1374,7 @@
             <i id="close" class="fa-solid fa-xmark text-3xl cursor-pointer"></i>
           </div>
           <iframe
-            class=""
+            class="max-w-full"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/O8kmknVFyKQ"
@@ -1532,6 +1537,13 @@
 
     <script>
       const modal = document.getElementById("modalVideo");
+
+      document
+        .getElementById("videoIcone2")
+        .addEventListener("click", function () {
+          modal.classList.toggle("hidden");
+        });
+
       document
         .getElementById("videoIcone")
         .addEventListener("click", function () {
@@ -1541,7 +1553,6 @@
       //
       document.getElementById("close").addEventListener("click", function () {
         modal.classList.toggle("hidden");
-        console.log("object");
       });
     </script>
 

@@ -103,12 +103,14 @@
       </nav>
       <!-- NavBar End  -->
     </header>
-    <main>
+    <main class="">
       <section
         class="py-[200px] text-white bg-[url('https://i.ibb.co/RNf7DzK/bgs.png')]"
       >
         <div class="container pt-6">
-          <h1 class="text-[60px] leading-[60px] text-center font-bold">
+          <h1
+            class="md:text-[60px] text-5xl leading-[60px] text-center font-bold"
+          >
             Features can change <br />
             your business
           </h1>
@@ -185,13 +187,9 @@
         </div>
       </section>
 
-      <!--  -->
-
-      <!--  -->
-
       <!-- Collaborate section start -->
       <section class="py-[120px] mt-32 relative">
-        <div class="absolute right-[9%] bottom-[5%]">
+        <div class="absolute right-[9%] bottom-[5%] md:block hidden">
           <img src="https://i.ibb.co/bQ96ccv/22.png" alt="" />
         </div>
         <div class="w-4/5 mx-auto flex lg:gap-[100px] lg:flex-row flex-col">
@@ -278,7 +276,7 @@
               Donec bibendum, dui id ultrices molestie, neque neque <br />
               porta felis, id viverra ligula justo interdum mi.
             </p>
-            <div class="grid grid-cols-2 gap-5">
+            <div class="grid md:grid-cols-2 gap-5">
               <div class="flex items-center gap-3">
                 <i class="fa-solid fa-circle-check"></i>
                 <p class="font-bold">Organize your data</p>
@@ -300,11 +298,11 @@
 
           <div class="">
             <div
-              class="p-[70px] pb-0 bg-[#808D9E] rounded-xl bg-cover bg-no-repeat relative"
+              class="lg:p-[70px] p-10 pb-0 bg-[#808D9E] rounded-xl bg-cover bg-no-repeat relative"
             >
               <!-- absulate card -->
               <div
-                class="bg-white absolute right-7 top-4 rounded-lg rounded-b-none p-5 px-6 shadow-xl"
+                class="bg-white absolute right-7 top-4 rounded-lg rounded-b-none p-5 px-6 shadow-xl lg:block hidden"
               >
                 <h1>Reader Rates</h1>
                 <h2 class="my-4 text-[28px] font-bold">3,729</h2>
@@ -360,9 +358,14 @@
         >
           <!-- top Style start  -->
 
-          <div
-            class="absolute py-8 bg-white top-[-5px] w-6/12 right-[-50px] skew-x-[-150deg]"
-          ></div>
+          <div class="">
+            <div
+              class="absolute py-8 bg-[#1D1E25] top-[-50px] w-[35%] left-0"
+            ></div>
+            <div
+              class="absolute py-8 bg-[#1D1E25] top-[-50px] left-[30%] w-[15%] skew-x-[-150deg]"
+            ></div>
+          </div>
           <!-- top Style end  -->
 
           <div class="grid lg:grid-cols-2 justify-items-center gap-3">
@@ -386,6 +389,7 @@
                 class="absolute top-0 left-0 flex items-center justify-center w-full h-full"
               >
                 <img
+                  id="videoIcone"
                   class="cursor-pointer"
                   src="https://i.ibb.co/cN5yYK3/Play-button.png"
                   alt=""
@@ -433,7 +437,9 @@
                 Pricing plan
               </p>
               <h2 class="mb-[44px]">Simple but effective</h2>
-              <div class="flex items-center justify-center gap-10">
+              <div
+                class="flex sm:flex-row flex-col items-center justify-center sm:gap-10 gap-2"
+              >
                 <p class="text-[20px] font-bold leading-[26px]">Pay Monthly</p>
                 <label class="switch">
                   <input type="checkbox" checked />
@@ -567,6 +573,30 @@
         </div>
       </section>
       <!-- pricing end  -->
+
+      <!-- modal video  -->
+      <div
+        id="modalVideo"
+        class="fixed top-0 left-0 h-screen w-screen max-w-full flex justify-center items-center z-[500] hidden bg-[#00000052]"
+      >
+        <div class="pt-10 relative">
+          <div
+            class="absolute top-0 right-0 p-1 mr-3 bg-white rounded-full px-3"
+          >
+            <i id="close" class="fa-solid fa-xmark text-3xl cursor-pointer"></i>
+          </div>
+          <iframe
+            class="max-w-full"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/O8kmknVFyKQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </main>
 
     <!-- footer  start -->
@@ -717,6 +747,19 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../main.js"></script>
 
-    <script></script>
+    <script>
+      const modal = document.getElementById("modalVideo");
+
+      document
+        .getElementById("videoIcone")
+        .addEventListener("click", function () {
+          modal.classList.toggle("hidden");
+        });
+
+      //
+      document.getElementById("close").addEventListener("click", function () {
+        modal.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>

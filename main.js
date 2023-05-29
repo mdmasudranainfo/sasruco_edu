@@ -1,8 +1,3 @@
-$(".counter").counterUp({
-  delay: 50,
-  time: 1000,
-});
-
 // Swippwr Js
 
 var swiper = new Swiper(".swiper-container", {
@@ -47,6 +42,11 @@ Collapse.addEventListener("click", () => {
   menuUL.classList.toggle("hidden");
 });
 
+$(".counter").counterUp({
+  delay: 50,
+  time: 1000,
+});
+
 // scroll background color
 $(window).scroll(function () {
   $("nav").toggleClass("addBg", $(this).scrollTop() > 50);
@@ -61,23 +61,3 @@ $(window).scroll(function () {
 //
 
 // contact page js accordtion with
-// accordion 1
-document.getElementById("Ac1").addEventListener("click", function () {
-  const element = document.getElementById("Acp1");
-  element.classList.toggle("hidden");
-});
-// accordion 2
-document.getElementById("Ac2").addEventListener("click", function () {
-  const element = document.getElementById("Acp2");
-  element.classList.toggle("hidden");
-});
-// accordion 3
-document.getElementById("Ac3").addEventListener("click", function () {
-  const element = document.getElementById("Acp3");
-  element.classList.toggle("hidden");
-});
-// accordion 4
-document.getElementById("Ac4").addEventListener("click", function () {
-  const element = document.getElementById("Acp4");
-  element.classList.toggle("hidden");
-});

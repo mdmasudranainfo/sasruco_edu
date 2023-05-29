@@ -1010,6 +1010,7 @@
                 >
                   <!-- diveo Icone  -->
                   <img
+                    id="videoIcone"
                     class="cursor-pointer"
                     src="https://i.ibb.co/cN5yYK3/Play-button.png"
                     alt=""
@@ -1054,7 +1055,7 @@
           </h1>
           <div>
             <button
-              class="text-white font-bold leading-5 tracking-[-0.05px] bg-[#1D1E25] px-6 py-3 rounded-md"
+              class="text-white font-bold leading-5 tracking-[-0.05px] bg-[#1D1E25] px-6 py-3 rounded-md hover:bg-[#2fc6a2] ease-in duration-200"
             >
               View all
             </button>
@@ -1063,7 +1064,7 @@
         <div
           class="grid mt-14 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]"
         >
-          <div>
+          <div class="hover:opacity-80 ease-in duration-200">
             <div>
               <img
                 class="w-full"
@@ -1094,7 +1095,7 @@
               October 27, 2021 | 4 min read
             </p>
           </div>
-          <div>
+          <div class="hover:opacity-80 ease-in duration-200">
             <div>
               <img
                 class="w-full"
@@ -1120,7 +1121,7 @@
               October 27, 2021 | 4 min read
             </p>
           </div>
-          <div>
+          <div class="hover:opacity-80 ease-in duration-200">
             <div>
               <img
                 class="w-full"
@@ -1160,7 +1161,7 @@
 
       <!-- Pricing plan start-->
       <section class="container mx-auto mb-[150px]">
-        <h1 class="text-[#FF9515] text-center">Pricing plan</h1>
+        <h1 class="text-[#FF9515] text-center font-bold">Pricing plan</h1>
         <h2 class="text-[60px] text-center font-bold">Simple but effective</h2>
         <div class="flex justify-center gap-6 mb-[60px]">
           <p class="font-bold">Pay Monthly</p>
@@ -1355,6 +1356,30 @@
         </div>
       </section>
       <!--  14 days end  -->
+
+      <!-- modal video  -->
+      <div
+        id="modalVideo"
+        class="fixed top-0 left-0 h-screen w-screen flex justify-center items-center z-[500] hidden bg-[#00000052]"
+      >
+        <div class="pt-10 relative">
+          <div
+            class="absolute top-0 right-0 p-1 mr-3 bg-white rounded-full px-3"
+          >
+            <i id="close" class="fa-solid fa-xmark text-3xl cursor-pointer"></i>
+          </div>
+          <iframe
+            class=""
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/O8kmknVFyKQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </main>
 
     <!-- footer  start -->
@@ -1504,6 +1529,21 @@
     <!-- jQuery Cdn -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../main.js"></script>
+
+    <script>
+      const modal = document.getElementById("modalVideo");
+      document
+        .getElementById("videoIcone")
+        .addEventListener("click", function () {
+          modal.classList.toggle("hidden");
+        });
+
+      //
+      document.getElementById("close").addEventListener("click", function () {
+        modal.classList.toggle("hidden");
+        console.log("object");
+      });
+    </script>
 
     <script></script>
   </body>
